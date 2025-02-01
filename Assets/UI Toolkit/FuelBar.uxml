@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/FuelBar.uss?fileID=7433441132597879392&amp;guid=cebdeae267a92084c82bd7166f5315d4&amp;type=3#FuelBar" />
-    <ui:VisualElement name="ParantFuel" style="flex-grow: 1; height: 244px; width: 892px; position: absolute; top: 19px; left: -46px;">
-        <ui:ProgressBar value="100" name="Fuelbar" style="height: 99px; width: 630px; position: absolute; top: 46px; left: 151px;" />
-        <ui:VisualElement name="DesignOverlay" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UI%20elements/Fuel/Fuel%20bar%20overlay_2.png?fileID=21300000&amp;guid=5743dae94213704449630b479da91c24&amp;type=3#Fuel bar overlay_2&quot;); height: 139px; width: 784px; top: 24px; left: 74px;" />
+    <ui:VisualElement name="ParantFuel" style="flex-grow: 1; height: 244px; width: 892px; position: absolute; top: -58px; left: -28px;">
+        <ui:ProgressBar value="100" name="Fuelbar" low-value="0" style="height: -7px; width: 630px; position: absolute; top: 519px; left: -176px; rotate: -90deg;" />
+        <ui:VisualElement name="DesignOverlay" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UI%20elements/Fuel/Fuel%20bar%20overlay_2.png?fileID=21300000&amp;guid=5743dae94213704449630b479da91c24&amp;type=3#Fuel bar overlay_2&quot;); height: 139px; width: 784px; top: 484px; left: -251px; rotate: -90deg; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(106, 106, 106);" />
     </ui:VisualElement>
 </ui:UXML>

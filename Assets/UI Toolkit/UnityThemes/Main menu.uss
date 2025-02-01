@@ -13,5 +13,9 @@
     -unity-background-image-tint-color: rgb(135, 57, 192);
 }
 
+#LevelSelectButton:hover {
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
 .button {
 }
