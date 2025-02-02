@@ -859,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280600819}
   - component: {fileID: 280600820}
+  - component: {fileID: 280600821}
   m_Layer: 13
   m_Name: Gizmo
   m_TagString: Untagged
@@ -874,7 +875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280600818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.31734943, y: 0.20448266, z: 0.18153442, w: 0.90803164}
+  m_LocalRotation: {x: -0.16308029, y: 0.05501651, z: -0.11538108, w: 0.9782971}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -906,7 +907,7 @@ Transform:
   - {fileID: 1667506463}
   - {fileID: 1470297067}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -40.584, y: 19.71, z: 15.261}
+  m_LocalEulerAnglesHint: {x: -17.842, y: 8.779, z: -14.833}
 --- !u!114 &280600820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +921,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &280600821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280600818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb127f21acd2a6641beabb2137f65b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lunarLander: {fileID: 1905877125}
+  landerSpeedZ: 0
+  landerSpeedX: 0
+  landerSpeedY: 0
+  bar1: 1
+  bar2: 2
+  bar3: 3
+  bar4: 4
 --- !u!1 &327121836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,7 +3577,7 @@ Transform:
   m_GameObject: {fileID: 1905877125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.178, y: 0, z: -1.762}
+  m_LocalPosition: {x: 3.828, y: 0, z: -0.902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
