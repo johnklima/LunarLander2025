@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1;">
-        <ui:VisualElement name="Warning" style="flex-grow: 1; width: 1920px; height: 1080px; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UI%20elements/Warning_decor.png?fileID=2800000&amp;guid=1c474df73959bd54ca05ca5540da43c3&amp;type=3#Warning_decor&quot;);">
-            <ui:VisualElement name="WarningText" class="hidden" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UI%20elements/Warning_text.png?fileID=2800000&amp;guid=df979eb1470e6b54c82419142de1daf4&amp;type=3#Warning_text&quot;);" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

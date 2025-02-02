@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6339ab055247a244a68e8900e9b6aa1, type: 3}
+  m_Name: LevelsData
+  m_EditorClassIdentifier: 
+  levelsData:
+  - name: Level 1
+    planetPrefab: {fileID: 6642951758503683107, guid: 572ba40776dfbec4ca92e87e0b6195c5,
+      type: 3}
+    shipMaxFuel: 40
+    zenitBlend: 10.4
+    nadirBlend: 8.6
+    horizontBlend: 0.01
+    skyColor: {r: 0, g: 0.007843138, b: 0.019607844, a: 1}
+    groundColor: {r: 0, g: 0, b: 0, a: 0}
+    horizontColor: {r: 0, g: 0.05882353, b: 0.16078432, a: 0}
+    starHeight: 139.7
+    starPower: 58
+    starIntensity: 199.13
+  - name: Level 2
+    planetPrefab: {fileID: 4107307214093643618, guid: cfca5d2d97bdacf4087b619380950310,
+      type: 3}
+    shipMaxFuel: 60
+    zenitBlend: 1.5
+    nadirBlend: 4.5
+    horizontBlend: 3
+    skyColor: {r: 0, g: 0, b: 0, a: 1}
+    groundColor: {r: 0, g: 0, b: 0, a: 0}
+    horizontColor: {r: 0.26415092, g: 0.005069346, b: 0, a: 1}
+    starHeight: 139.7
+    starPower: 73.8
+    starIntensity: 231.9
+  - name: Level 3
+    planetPrefab: {fileID: 6591764479479213157, guid: 98dc91db1cb40b442aab327aa2a34e8c,
+      type: 3}
+    shipMaxFuel: 80
+    zenitBlend: 4.8
+    nadirBlend: 6.3
+    horizontBlend: 4
+    skyColor: {r: 0, g: 0, b: 0, a: 1}
+    groundColor: {r: 0, g: 0, b: 0, a: 0}
+    horizontColor: {r: 0.4339623, g: 0.4280948, b: 0, a: 1}
+    starHeight: 122.5
+    starPower: 55.6
+    starIntensity: 186.7
