@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//TheWalkingButterfly
 public class OrbitCamera : MonoBehaviour
 {
     [Header("Target Settings")]
@@ -22,6 +23,25 @@ public class OrbitCamera : MonoBehaviour
     [Header("Collision")]
     public LayerMask collisionMask;
     public float collisionOffset = 0.3f;
+
+    //small update
+    private static OrbitCamera _instance;
+    public static OrbitCamera Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<OrbitCamera>();
+
+                if (_instance == null)
+                {
+                    throw new System.Exception("No instance of TPCameraManager was found in the scene.");
+                }
+            }
+            return _instance;
+        }
+    }
 
     private float currentYaw;
     private float currentPitch;

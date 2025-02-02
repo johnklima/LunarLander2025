@@ -62,6 +62,24 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f9be2842-8c32-4958-b4ce-2f5f9f89f9fb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AllowCameraRotation"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""6fac6209-435b-415a-8b2d-a8e2807d3420"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,8 +170,36 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df012fe0-6c3e-4919-b08f-77cfcccfa5cd"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""025b05b9-d15c-44fc-af8f-6eed6adbdca0"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AllowCameraRotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""6c6d4585-568d-47c6-9590-ec5f9ad1148f"",
+            ""actions"": [],
+            ""bindings"": []
         }
     ],
     ""controlSchemes"": []
@@ -164,11 +210,16 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         m_Gameplay_CameraRotation = m_Gameplay.FindAction("CameraRotation", throwIfNotFound: true);
         m_Gameplay_Zoom = m_Gameplay.FindAction("Zoom", throwIfNotFound: true);
         m_Gameplay_ShipThrust = m_Gameplay.FindAction("ShipThrust", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
+        m_Gameplay_AllowCameraRotation = m_Gameplay.FindAction("AllowCameraRotation", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
     }
 
     ~@SpaceShipInput()
     {
         UnityEngine.Debug.Assert(!m_Gameplay.enabled, "This will cause a leak and performance issues, SpaceShipInput.Gameplay.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, SpaceShipInput.UI.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -234,6 +285,8 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_CameraRotation;
     private readonly InputAction m_Gameplay_Zoom;
     private readonly InputAction m_Gameplay_ShipThrust;
+    private readonly InputAction m_Gameplay_Pause;
+    private readonly InputAction m_Gameplay_AllowCameraRotation;
     public struct GameplayActions
     {
         private @SpaceShipInput m_Wrapper;
@@ -242,6 +295,8 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         public InputAction @CameraRotation => m_Wrapper.m_Gameplay_CameraRotation;
         public InputAction @Zoom => m_Wrapper.m_Gameplay_Zoom;
         public InputAction @ShipThrust => m_Wrapper.m_Gameplay_ShipThrust;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
+        public InputAction @AllowCameraRotation => m_Wrapper.m_Gameplay_AllowCameraRotation;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -263,6 +318,12 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
             @ShipThrust.started += instance.OnShipThrust;
             @ShipThrust.performed += instance.OnShipThrust;
             @ShipThrust.canceled += instance.OnShipThrust;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @AllowCameraRotation.started += instance.OnAllowCameraRotation;
+            @AllowCameraRotation.performed += instance.OnAllowCameraRotation;
+            @AllowCameraRotation.canceled += instance.OnAllowCameraRotation;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -279,6 +340,12 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
             @ShipThrust.started -= instance.OnShipThrust;
             @ShipThrust.performed -= instance.OnShipThrust;
             @ShipThrust.canceled -= instance.OnShipThrust;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @AllowCameraRotation.started -= instance.OnAllowCameraRotation;
+            @AllowCameraRotation.performed -= instance.OnAllowCameraRotation;
+            @AllowCameraRotation.canceled -= instance.OnAllowCameraRotation;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -296,11 +363,54 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         }
     }
     public GameplayActions @Gameplay => new GameplayActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    public struct UIActions
+    {
+        private @SpaceShipInput m_Wrapper;
+        public UIActions(@SpaceShipInput wrapper) { m_Wrapper = wrapper; }
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IGameplayActions
     {
         void OnShipRotation(InputAction.CallbackContext context);
         void OnCameraRotation(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
         void OnShipThrust(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnAllowCameraRotation(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
     }
 }
