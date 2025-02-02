@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GizmoRotation : MonoBehaviour
 {
-    //Hook lander's rotation (real coder would know better how to do it)
-    public Quaternion rotation;
+    //Hook lander's rotation
+    public GameObject lander;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class GizmoRotation : MonoBehaviour
     void Update()
     {
         //Update rotation to same as lander
-        this.transform.rotation = rotation;
+        this.transform.rotation = lander.transform.rotation;
     }
 }
