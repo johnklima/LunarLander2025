@@ -63,10 +63,55 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f5987c020f6c6204488a7413a46747a5, type: 2}
+    - target: {fileID: -852765743381274606, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0065
+      objectReference: {fileID: 0}
+    - target: {fileID: -852765743381274606, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0234
+      objectReference: {fileID: 0}
+    - target: {fileID: -852765743381274606, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0015
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c5979cf85f5fcc64f871445f2878385f,
         type: 3}
       propertyPath: m_Name
       value: Tree2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255417055805000948, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.006461583
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255417055805000948, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.023413494
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255417055805000948, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0014831349
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209039091497090691, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.006461583
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209039091497090691, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.023413494
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209039091497090691, guid: c5979cf85f5fcc64f871445f2878385f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0014831349
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
