@@ -17,5 +17,22 @@
     -unity-background-image-tint-color: rgb(135, 57, 192);
 }
 
+#BackButton:hover {
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#Level1:hover {
+    scale: 1.1 1.1;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+#Level2:hover {
+    scale: 1.1 1.1;
+}
+
+#Level3:hover {
+    scale: 1.1 1.1;
+}
+
 .button {
 }
