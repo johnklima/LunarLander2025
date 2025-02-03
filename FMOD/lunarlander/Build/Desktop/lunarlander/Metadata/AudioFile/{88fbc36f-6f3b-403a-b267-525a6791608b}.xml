@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{88fbc36f-6f3b-403a-b267-525a6791608b}">
+		<property name="assetPath">
+			<value>multi_compressed-air.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.3813958333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a3976c7-b066-4a3f-a838-5ad055b8a6dd}</destination>
+		</relationship>
+	</object>
+</objects>
