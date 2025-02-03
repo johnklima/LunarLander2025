@@ -380,7 +380,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 768814341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 698949982a64b814d84b20c3de30ac55, type: 3}
+  m_Script: {fileID: 11500000, guid: d19612f348e6ea14599416a91ed7113b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fuelLevel: 100

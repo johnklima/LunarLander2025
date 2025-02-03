@@ -17,7 +17,3 @@
     background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Pause/Pause%20Menu%20Quite_Select.png?fileID=21300000&guid=dcf276d1de1df774a82fd371bfe723ad&type=3#Pause Menu Quite_Select");
     -unity-background-image-tint-color: rgb(135, 57, 192);
 }
-
-#BackButton:hover {
-    -unity-background-image-tint-color: rgb(135, 57, 192);
-}

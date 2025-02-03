@@ -77,7 +77,7 @@ public class LanderSmoother : MonoBehaviour
                 {
                     targetCenter = hitedObject.transform.GetChild(0);
 
-                    // Asignar el punto donde aterrizas
+                    // Assign landing point
                     landingPoint = targetCenter.position;
 
                     InputsManager.Player.OnOffThruster.Disable();
@@ -105,7 +105,7 @@ public class LanderSmoother : MonoBehaviour
                         // Verify that the pointsGenerator is not null before using it.
                         if (pointsGenerator != null)
                         {
-                            // Asignar el punto donde aterrizas
+                            // Assign landing point
                             landingPoint = closestPoint;
 
                             InstantiateGoundSmokeVFX();
@@ -149,7 +149,7 @@ public class LanderSmoother : MonoBehaviour
 
         // Smoothing position and rotation to targetCenter
         transform.parent.SetPositionAndRotation(
-            Vector3.Lerp(transform.parent.position, targetCenter.position, alignmentSpeed * Time.deltaTime), 
+            Vector3.Lerp(transform.parent.position, targetCenter.position, alignmentSpeed * Time.deltaTime),
             Quaternion.Lerp(transform.parent.rotation, targetCenter.rotation, alignmentSpeed * Time.deltaTime));
 
         // Check whether the alignment has been completed

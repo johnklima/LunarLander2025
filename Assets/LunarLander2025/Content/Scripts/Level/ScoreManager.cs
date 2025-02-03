@@ -25,19 +25,19 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    // Function to calculate score based on distance.
+    // Función para calcular el puntaje basado en la distancia.
     public float CalculateScore(Vector3 winPoint, Vector3 landPoint)
     {
-        // Calculate the distance between the landing point and the center of the platform.
+        // Calcula la distancia entre el punto de aterrizaje y el centro de la plataforma.
         float distance = Vector3.Distance(winPoint, landPoint);
 
-        // Normalizes the distance to the range from 0 (minDistance) to 1 (maxDistance).
+        // Normaliza la distancia al rango de 0 (minDistance) a 1 (maxDistance).
         float normalizedDistance = Mathf.Clamp01((distance - minDistance) / (maxDistance - minDistance));
 
-        // Converts the normalized distance to a number of stars in intervals of 0.5.
+        // Convierte la distancia normalizada a un número de estrellas en intervalos de 0.5.
         float stars = Mathf.Lerp(3f, 0.5f, normalizedDistance);
 
-        // Round the number of stars to the nearest multiple of 0.5.
+        // Redondea el número de estrellas al múltiplo más cercano de 0.5.
         stars = Mathf.Round(stars * 2f) / 2f;
 
         return stars;

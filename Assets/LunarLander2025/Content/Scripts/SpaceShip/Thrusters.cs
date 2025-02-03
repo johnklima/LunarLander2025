@@ -24,11 +24,11 @@ public class Thrusters : MonoBehaviour
     #region Public Values
     public float fuelEfficiency = 1f;
     public Vector3 upDirection;
-    
+
     public float currentThrust;
     public float maxThrust;
-    [Min(1)]public float thrustBuildRate  = 5f; //default value 5, min value 1
-    [Min(1)]public float thrustDecayRate = 5f;  //default value 5, min value 1
+    [Min(1)] public float thrustBuildRate = 5f; //default value 5, min value 1
+    [Min(1)] public float thrustDecayRate = 5f;  //default value 5, min value 1
 
     public ParticleSystem firePS;
     public ParticleSystem smokePS;

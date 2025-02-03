@@ -73,9 +73,9 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""OnOff Thruster"",
+                    ""name"": ""OnOffThruster"",
                     ""type"": ""Button"",
-                    ""id"": ""f246b761-ab85-4d52-8a87-04b7cf458cc4"",
+                    ""id"": ""06d830c7-d011-4a83-a0eb-0bdcecba03c5"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -250,12 +250,12 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4a1e28b2-87a2-4340-9fcc-5cb75acb1f43"",
+                    ""id"": ""1f326066-9055-4771-86f6-12beb1cfa502"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""OnOff Thruster"",
+                    ""action"": ""OnOffThruster"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -931,7 +931,7 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         m_Gameplay_Zoom = m_Gameplay.FindAction("Zoom", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_AllowCameraRotation = m_Gameplay.FindAction("AllowCameraRotation", throwIfNotFound: true);
-        m_Gameplay_OnOffThruster = m_Gameplay.FindAction("OnOff Thruster", throwIfNotFound: true);
+        m_Gameplay_OnOffThruster = m_Gameplay.FindAction("OnOffThruster", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);

@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine;
+
 public class MainMenu : MonoBehaviour
 {
     private Button _playButton;
@@ -12,17 +11,17 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        //Getting the UI toolkit to connect with the script
+        // Getting the UI toolkit to connect with the script
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
-        //Linking buttions to the UI
+        // Linking buttions to the UI
 
         _playButton = root.Q<Button>("PlayButton");
         _quitButton = root.Q<Button>("QuitButton");
         _optionsButton = root.Q<Button>("OptionsButton");
         _backButton = root.Q<Button>("BackButton");
 
-        //linking the UI to the click events
+        // Linking the UI to the click events
         _playButton.clicked += OnPlayButtonClick;
         _quitButton.clicked += OnQuitButtonClick;
         _optionsButton.clicked += OnOptionsButtonClick;
@@ -31,7 +30,10 @@ public class MainMenu : MonoBehaviour
     private void OnPlayButtonClick()
     {
         Debug.Log("Play Button Clicked!");
-        SceneManager.LoadScene(1);
+        FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene(1);
+        });
     }
 
     private void OnOptionsButtonClick()
@@ -44,5 +46,4 @@ public class MainMenu : MonoBehaviour
         Debug.Log("You have clicked Quit");
         Application.Quit();
     }
-
 }

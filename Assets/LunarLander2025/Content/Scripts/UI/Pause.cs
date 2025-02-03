@@ -36,12 +36,12 @@ public class Pause : MonoBehaviour
     {
         get
         {
-            // If the instance is null, an attempt is made to find an existing one
+            // Si la instancia es nula, se intenta encontrar una existente
             if (_instance == null)
             {
                 _instance = FindObjectOfType<Pause>();
 
-                // If not found, an exception is thrown
+                // Si no se encuentra, se lanza una excepción
                 if (_instance == null)
                 {
                     throw new System.Exception("No se encontró ninguna instancia de PauseManager en la escena.");

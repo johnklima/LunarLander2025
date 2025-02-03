@@ -27,11 +27,11 @@ public class Gravity : MonoBehaviour, IPhysicsObject
     [Space(10)]
 
     public float GRAVITY_CONSTANT = -9.8f;               // -- for earth,  -1.6 for moon 
-    public Vector3 velocity = new (0, 0, 0);             //current direction and speed of movement
-    public Vector3 acceleration = new (0, 0, 0);         //movement controlled by player movement force and gravity
-    public Vector3 thrust = new (0, 0, 0);               //player applied thrust vector
-    public Vector3 finalForce = new (0, 0, 0);           //final force to be applied this frame
-    public Vector3 impulse = new (0, 0, 0);
+    public Vector3 velocity = new(0, 0, 0);             //current direction and speed of movement
+    public Vector3 acceleration = new(0, 0, 0);         //movement controlled by player movement force and gravity
+    public Vector3 thrust = new(0, 0, 0);               //player applied thrust vector
+    public Vector3 finalForce = new(0, 0, 0);           //final force to be applied this frame
+    public Vector3 impulse = new(0, 0, 0);
     public float mass = 1.0f;
     public float height = 0;
     public float timeScalar = 1.0f;

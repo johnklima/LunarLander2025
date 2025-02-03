@@ -51,9 +51,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "OnOff Thruster",
+                    "name": "OnOffThruster",
                     "type": "Button",
-                    "id": "f246b761-ab85-4d52-8a87-04b7cf458cc4",
+                    "id": "06d830c7-d011-4a83-a0eb-0bdcecba03c5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -228,12 +228,12 @@
                 },
                 {
                     "name": "",
-                    "id": "4a1e28b2-87a2-4340-9fcc-5cb75acb1f43",
+                    "id": "1f326066-9055-4771-86f6-12beb1cfa502",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OnOff Thruster",
+                    "action": "OnOffThruster",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
