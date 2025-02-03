@@ -1,6 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5601571852865718786
+--- !u!114 &-5878478649716520815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BackgroundEnviroment
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BackgroundEnviroment
+  Guid:
+    Data1: 2130960503
+    Data2: 1214826613
+    Data3: 1571520151
+    Data4: 987452053
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66000
+--- !u!114 &-2422821535150386473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,30 +42,10 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638742060937752812
+  lastModified: 638742082971680011
   FileSizes: []
   Exists: 1
---- !u!114 &-5207967752746438293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638742060937811713
-  FileSizes:
-  - Name: 
-    Value: 974
-  Exists: 1
---- !u!114 &-4131908690818354410
+--- !u!114 &-1279385627491769361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,23 +55,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/backgroundEnviroment
+  m_Name: event:/SFX/ShipAlerts
   m_EditorClassIdentifier: 
-  Path: event:/Music/backgroundEnviroment
+  Path: event:/SFX/ShipAlerts
   Guid:
-    Data1: 2130960503
-    Data2: 1214826613
-    Data3: 1571520151
-    Data4: 987452053
+    Data1: -192086146
+    Data2: 1189850858
+    Data3: 1237488535
+    Data4: -75372085
   Banks:
-  - {fileID: -5601571852865718786}
+  - {fileID: -2422821535150386473}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 66000
+  Length: 63360
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,22 +85,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5207967752746438293}
-  - {fileID: -5601571852865718786}
+  - {fileID: 5532394258585426179}
+  - {fileID: -2422821535150386473}
   EditorEvents:
-  - {fileID: 2839655026311024153}
-  - {fileID: 6776038733056748724}
-  - {fileID: -4131908690818354410}
-  - {fileID: 7206657067242345288}
-  - {fileID: 1218773268145521553}
+  - {fileID: 3413203824307311215}
+  - {fileID: 6032266503016217756}
+  - {fileID: -5878478649716520815}
+  - {fileID: -1279385627491769361}
+  - {fileID: 1194451217735879472}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5601571852865718786}
+  - {fileID: -2422821535150386473}
   StringsBanks:
-  - {fileID: -5207967752746438293}
-  cacheTime: 638742060937811713
+  - {fileID: 5532394258585426179}
+  cacheTime: 638742082971690064
   cacheVersion: 131622
---- !u!114 &1218773268145521553
+--- !u!114 &1194451217735879472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,15 +119,15 @@ MonoBehaviour:
     Data3: -781162335
     Data4: 1412768412
   Banks:
-  - {fileID: -5601571852865718786}
+  - {fileID: -2422821535150386473}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5039
---- !u!114 &2839655026311024153
+  Length: 5095
+--- !u!114 &3413203824307311215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +146,7 @@ MonoBehaviour:
     Data3: -723643989
     Data4: -1533434202
   Banks:
-  - {fileID: -5601571852865718786}
+  - {fileID: -2422821535150386473}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -147,7 +154,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 124571
---- !u!114 &6776038733056748724
+--- !u!114 &5532394258585426179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638742082971690064
+  FileSizes:
+  - Name: 
+    Value: 978
+  Exists: 1
+--- !u!114 &6032266503016217756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,38 +193,11 @@ MonoBehaviour:
     Data3: -1108656968
     Data4: 731033352
   Banks:
-  - {fileID: -5601571852865718786}
+  - {fileID: -2422821535150386473}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7592
---- !u!114 &7206657067242345288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LandingPad
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LandingPad
-  Guid:
-    Data1: -1095199041
-    Data2: 1317475120
-    Data3: 283136914
-    Data4: 2081362138
-  Banks:
-  - {fileID: -5601571852865718786}
-  IsStream: 1
-  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 63360
+  Length: 7592

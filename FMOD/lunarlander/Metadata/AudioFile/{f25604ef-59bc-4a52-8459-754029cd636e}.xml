@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f25604ef-59bc-4a52-8459-754029cd636e}">
+		<property name="assetPath">
+			<value>104318__proxima4__the-begining-has-end.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>76.363624999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee87b4a2-a8d5-4bb2-86d6-349ec5560373}</destination>
+		</relationship>
+	</object>
+</objects>
