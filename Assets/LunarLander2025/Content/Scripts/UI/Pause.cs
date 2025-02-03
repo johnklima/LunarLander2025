@@ -85,11 +85,11 @@ public class Pause : MonoBehaviour
     {
         InputsManager.Player.Pause.performed -= PauseHandler;
     }
-    void Awake ()
+    void Awake()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         _PauseUI = root.Q<VisualElement>("PauseFrame");
-       
+
         _continueButton = root.Q<Button>("ContinueButton");
         _mainmenuButton = root.Q<Button>("MainMenuButton");
         _quitButton = root.Q<Button>("QuitButton");
@@ -138,6 +138,7 @@ public class Pause : MonoBehaviour
         _PauseUI.style.display = DisplayStyle.None;
         OrbitCamera.Instance.AllowCameraManagment(true);
         OrbitCamera.Instance.SetCursorState(true);
+        if (blurVolume.profile.TryGet<DepthOfField>(out depthOfField)) depthOfField.active = false;
 
         Time.timeScale = 1;
         Debug.Log("Continue");
