@@ -15,10 +15,8 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638742047142555195
-  FileSizes:
-  - Name: Desktop
-    Value: 3308448
+  lastModified: 638742060937752812
+  FileSizes: []
   Exists: 1
 --- !u!114 &-5207967752746438293
 MonoBehaviour:
@@ -35,9 +33,9 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638742047142565168
+  lastModified: 638742060937811713
   FileSizes:
-  - Name: Desktop
+  - Name: 
     Value: 974
   Exists: 1
 --- !u!114 &-4131908690818354410
@@ -93,7 +91,7 @@ MonoBehaviour:
   - {fileID: -5601571852865718786}
   StringsBanks:
   - {fileID: -5207967752746438293}
-  cacheTime: 638742047142565168
+  cacheTime: 638742060937811713
   cacheVersion: 131622
 --- !u!114 &1218773268145521553
 MonoBehaviour:
