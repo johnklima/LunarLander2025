@@ -196,12 +196,12 @@ public class LanderSmoother : MonoBehaviour
         externalSmoke = newVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
         newVFX.transform.up = transform.up;
 
-        FMODManager.Instance.StopConstant2DSound("SFX/ShipEngine");
-        FMODManager.Instance.PlayConstant2DSound("SFX/LandingThrust");
+        FMODManager.Instance.StopConstant2DSound("Engine Startup and Idle");
+        FMODManager.Instance.PlayConstant2DSound("Main Thruster");
     }
     private void InstantiateExplosionEffect()
     {
-        FMODManager.Instance.PlayOneShot2DSound("SFX/Explosion");
+        FMODManager.Instance.PlayOneShot2DSound("Medium Explosion");
         Instantiate(explosionPrefab, explosionRef.position, Quaternion.identity);
     }
     #endregion
@@ -237,7 +237,7 @@ public class LanderSmoother : MonoBehaviour
         internalEmission.rateOverTime = 0;
         externalEmission.rateOverTime = 0;
 
-        FMODManager.Instance.StopConstant2DSound("SFX/LandingThrust");
+        FMODManager.Instance.StopConstant2DSound("Main Thruster");
         Destroy(internalSmoke.gameObject);
     }
     #endregion
