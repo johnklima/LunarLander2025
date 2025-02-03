@@ -1,0 +1,12 @@
+#retray_button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#nextlevel_button:hover {
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#mainmenu_button:hover {
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}

@@ -1,0 +1,20 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib ThreeLeafsClover_Low.mtl
+g default
+v -0.907989 0.004605 1.150829
+v 0.907989 0.004605 1.150829
+v -0.907989 0.004605 -0.665150
+v 0.907989 0.004605 -0.665150
+vt 0.000000 0.000000
+vt 1.000000 0.000000
+vt 0.000000 1.000000
+vt 1.000000 1.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+s off
+g pPlane29
+usemtl initialShadingGroup
+f 1/1/1 2/2/2 4/4/3 3/3/4

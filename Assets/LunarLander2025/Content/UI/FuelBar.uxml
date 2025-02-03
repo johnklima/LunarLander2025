@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Jisas_Test/UI%20Toolkit/FuelBar.uss?fileID=7433441132597879392&amp;guid=cebdeae267a92084c82bd7166f5315d4&amp;type=3#FuelBar" />
+    <ui:VisualElement name="ParentFuel" style="flex-grow: 1; height: 190px; width: 892px; position: absolute; top: 445px; left: -346px; display: flex; rotate: -90deg;">
+        <ui:ProgressBar value="100" name="Fuelbar" style="height: 99px; width: 630px; position: absolute; top: 46px; left: 151px; background-image: url(&quot;project://database/Assets/Jisas_Test/UI%20Toolkit/UI%20elements/Fuel/Fuel%20bar%20background_2.png?fileID=2800000&amp;guid=1fd9b28f1a07ffc4f962a5d1d5db9c4a&amp;type=3#Fuel bar background_2&quot;);" />
+        <ui:VisualElement name="DesignOverlay" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Jisas_Test/UI%20Toolkit/UI%20elements/Fuel/Fuel%20bar%20overlay_2.png?fileID=21300000&amp;guid=5743dae94213704449630b479da91c24&amp;type=3#Fuel bar overlay_2&quot;); height: 139px; width: 784px; top: 24px; left: 74px; display: flex;" />
+    </ui:VisualElement>
+</ui:UXML>

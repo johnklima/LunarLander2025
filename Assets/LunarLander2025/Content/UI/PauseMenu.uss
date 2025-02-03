@@ -1,0 +1,19 @@
+#ContinueButton:hover {
+    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Pause/Pause%20Menu%20Continue_Select.png?fileID=21300000&guid=fe1b9e7fc456fec4783f4a18163e3903&type=3#Pause Menu Continue_Select");
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#OptionsButton:hover {
+    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Pause/Main%20Menu%20Options_Select.png?fileID=21300000&guid=7cc49f888e524a54ea612fefa70e0e83&type=3#Main Menu Options_Select");
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#MainMenuButton:hover {
+    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Pause/Pause%20Menu%20MM_Select.png?fileID=21300000&guid=076669a84aabb214f8ef0d7bd253d695&type=3#Pause Menu MM_Select");
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
+
+#QuitButton:hover {
+    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Pause/Pause%20Menu%20Quite_Select.png?fileID=21300000&guid=dcf276d1de1df774a82fd371bfe723ad&type=3#Pause Menu Quite_Select");
+    -unity-background-image-tint-color: rgb(135, 57, 192);
+}
