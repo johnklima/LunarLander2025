@@ -82,8 +82,9 @@ public class PointsGenerator : MonoBehaviour
         {
             Progress = (float)triangleIndex / totalTriangles;
         }
-
+#if UNITY_EDITOR
         RepaintInspector();
+#endif
     }
     private void GenerateGridPointsOnTriangle(int index)
     {
@@ -172,13 +173,16 @@ public class PointsGenerator : MonoBehaviour
         triangles = mesh.triangles;
         totalTriangles = triangles.Length / 3;
         Progress = 0f;
-
+#if UNITY_EDITOR
         EditorApplication.update += EditorUpdate;
+#endif
     }
     public void CancelGeneration()
     {
         IsGenerating = false;
+    #if UNITY_EDITOR
         EditorApplication.update -= EditorUpdate;
+    #endif
         SurfacePoints.Clear();
         Progress = 0.0f;
         Debug.Log("Generation cancelled and memory cleared.");
