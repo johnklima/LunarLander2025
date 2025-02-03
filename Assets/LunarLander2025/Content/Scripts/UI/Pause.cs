@@ -54,6 +54,7 @@ public class Pause : MonoBehaviour
 
     #region Private Fields
     private DepthOfField depthOfField;
+    private FuelBar fuelBar;
     #endregion
 
     #region Actions
@@ -87,6 +88,8 @@ public class Pause : MonoBehaviour
     }
     void Awake()
     {
+        fuelBar = FindAnyObjectByType<FuelBar>();
+
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         _PauseUI = root.Q<VisualElement>("PauseFrame");
 
@@ -136,6 +139,7 @@ public class Pause : MonoBehaviour
     {
         isGamePause = !isGamePause;
         _PauseUI.style.display = DisplayStyle.None;
+        fuelBar.OnResumeHandler();
         OrbitCamera.Instance.AllowCameraManagment(true);
         OrbitCamera.Instance.SetCursorState(true);
         if (blurVolume.profile.TryGet<DepthOfField>(out depthOfField)) depthOfField.active = false;

@@ -64,10 +64,10 @@ public class FuelBar : MonoBehaviour
 
     #region Callbaks
     private void OnPauseHandler()
-    {       
+    {
         fuelBarElement.style.display = DisplayStyle.None;
     }
-    private void OnResumeHandler()
+    public void OnResumeHandler()
     {
         fuelBarElement.style.display = DisplayStyle.Flex;
     }
