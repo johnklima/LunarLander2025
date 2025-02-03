@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OnOff Thruster",
+                    "type": "Button",
+                    "id": "f246b761-ab85-4d52-8a87-04b7cf458cc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -214,6 +223,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "AllowCameraRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a1e28b2-87a2-4340-9fcc-5cb75acb1f43",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnOff Thruster",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

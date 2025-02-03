@@ -71,6 +71,15 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OnOff Thruster"",
+                    ""type"": ""Button"",
+                    ""id"": ""f246b761-ab85-4d52-8a87-04b7cf458cc4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -236,6 +245,17 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""AllowCameraRotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a1e28b2-87a2-4340-9fcc-5cb75acb1f43"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OnOff Thruster"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -911,6 +931,7 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         m_Gameplay_Zoom = m_Gameplay.FindAction("Zoom", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_AllowCameraRotation = m_Gameplay.FindAction("AllowCameraRotation", throwIfNotFound: true);
+        m_Gameplay_OnOffThruster = m_Gameplay.FindAction("OnOff Thruster", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1000,6 +1021,7 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Zoom;
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_AllowCameraRotation;
+    private readonly InputAction m_Gameplay_OnOffThruster;
     public struct GameplayActions
     {
         private @SpaceShipInput m_Wrapper;
@@ -1009,6 +1031,7 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         public InputAction @Zoom => m_Wrapper.m_Gameplay_Zoom;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @AllowCameraRotation => m_Wrapper.m_Gameplay_AllowCameraRotation;
+        public InputAction @OnOffThruster => m_Wrapper.m_Gameplay_OnOffThruster;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1033,6 +1056,9 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
             @AllowCameraRotation.started += instance.OnAllowCameraRotation;
             @AllowCameraRotation.performed += instance.OnAllowCameraRotation;
             @AllowCameraRotation.canceled += instance.OnAllowCameraRotation;
+            @OnOffThruster.started += instance.OnOnOffThruster;
+            @OnOffThruster.performed += instance.OnOnOffThruster;
+            @OnOffThruster.canceled += instance.OnOnOffThruster;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -1052,6 +1078,9 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
             @AllowCameraRotation.started -= instance.OnAllowCameraRotation;
             @AllowCameraRotation.performed -= instance.OnAllowCameraRotation;
             @AllowCameraRotation.canceled -= instance.OnAllowCameraRotation;
+            @OnOffThruster.started -= instance.OnOnOffThruster;
+            @OnOffThruster.performed -= instance.OnOnOffThruster;
+            @OnOffThruster.canceled -= instance.OnOnOffThruster;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -1252,6 +1281,7 @@ public partial class @SpaceShipInput: IInputActionCollection2, IDisposable
         void OnZoom(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnAllowCameraRotation(InputAction.CallbackContext context);
+        void OnOnOffThruster(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

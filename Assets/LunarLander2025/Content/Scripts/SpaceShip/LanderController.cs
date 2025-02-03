@@ -41,8 +41,6 @@ public class LanderController : MonoBehaviour
     }
     public void Update()
     {
-        if (thrusters.ThrusterState != ThrusterState.On) return;
-
         // adding to the rotation each frame
         curretRot.x += pitch * Time.deltaTime;
         curretRot.y += roll * Time.deltaTime;
@@ -53,7 +51,7 @@ public class LanderController : MonoBehaviour
     }
     public void LateUpdate()
     {
-        if (thrusters.ThrusterState != ThrusterState.On) return;
+        if (thrusters.ThrusterState == ThrusterState.Off) return;
         curretRot = Vector3.Lerp(curretRot, Vector3.zero, 0.003f);
     }
     private void OnEnable()
@@ -69,8 +67,6 @@ public class LanderController : MonoBehaviour
     #region Internal
     private void ShipRotationStarted(InputAction.CallbackContext obj)
     {
-        if (thrusters.ThrusterState != ThrusterState.On) return;
-
         // changes the rotation based on the input vector2 value. 
         yaw = obj.ReadValue<Vector2>().x * rotationTorque;
         pitch = obj.ReadValue<Vector2>().y * rotationTorque;

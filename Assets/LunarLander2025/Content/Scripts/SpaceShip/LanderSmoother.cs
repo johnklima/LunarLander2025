@@ -77,9 +77,11 @@ public class LanderSmoother : MonoBehaviour
                 {
                     targetCenter = hitedObject.transform.GetChild(0);
 
-                    // Assign the point where you land
+                    // Asignar el punto donde aterrizas
                     landingPoint = targetCenter.position;
 
+                    InputsManager.Player.OnOffThruster.Disable();
+                    thrusters.ThrusterState = ThrusterState.On;
                     InstantiateGoundSmokeVFX();
 
                     landerController.PlayerState = PlayerState.Grounded;
@@ -103,7 +105,7 @@ public class LanderSmoother : MonoBehaviour
                         // Verify that the pointsGenerator is not null before using it.
                         if (pointsGenerator != null)
                         {
-                            // Assign the point where you land
+                            // Asignar el punto donde aterrizas
                             landingPoint = closestPoint;
 
                             InstantiateGoundSmokeVFX();
@@ -113,6 +115,10 @@ public class LanderSmoother : MonoBehaviour
 
                             // Orient the rotation of the targetCenter to match the normal rotation.
                             targetCenter.rotation = Quaternion.FromToRotation(Vector3.up, normal);
+
+                            // We disable the input and turn on the engine automatically
+                            InputsManager.Player.OnOffThruster.Disable();
+                            thrusters.ThrusterState = ThrusterState.On;
 
                             landerController.PlayerState = PlayerState.Grounded;
                             gravity.ResetValues();
