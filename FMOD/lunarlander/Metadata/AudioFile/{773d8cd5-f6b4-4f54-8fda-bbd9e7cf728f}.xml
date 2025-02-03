@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{773d8cd5-f6b4-4f54-8fda-bbd9e7cf728f}">
+		<property name="assetPath">
+			<value>rocketthrustmaxx.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.5922916666666671</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a3976c7-b066-4a3f-a838-5ad055b8a6dd}</destination>
+		</relationship>
+	</object>
+</objects>
