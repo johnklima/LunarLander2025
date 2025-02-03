@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5878478649716520815
+--- !u!114 &-6736959122119339895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,23 +10,131 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BackgroundEnviroment
+  m_Name: event:/Ambient1
   m_EditorClassIdentifier: 
-  Path: event:/Music/BackgroundEnviroment
+  Path: event:/Ambient1
   Guid:
-    Data1: 2130960503
-    Data2: 1214826613
-    Data3: 1571520151
-    Data4: 987452053
+    Data1: -1300258939
+    Data2: 1306594662
+    Data3: 376908980
+    Data4: 999347463
   Banks:
   - {fileID: -2422821535150386473}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 76363
+--- !u!114 &-6066667664356738169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/star_trek_alert
+  m_EditorClassIdentifier: 
+  Path: event:/star_trek_alert
+  Guid:
+    Data1: 65340790
+    Data2: 1312573041
+    Data3: -1505614162
+    Data4: -1122404504
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5684714679121421640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient1 & Ambient Bridge Signals
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient1 & Ambient Bridge Signals
+  Guid:
+    Data1: -257957075
+    Data2: 1329490852
+    Data3: 1221366661
+    Data4: 1945736897
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 66000
+  Length: 55000
+--- !u!114 &-4990367000294321046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Large Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/Large Explosion
+  Guid:
+    Data1: 1441918575
+    Data2: 1149473567
+    Data3: -510817864
+    Data4: 1981676839
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4745897673642959979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Medium Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/Medium Explosion
+  Guid:
+    Data1: 309132287
+    Data2: 1326202987
+    Data3: 1422605740
+    Data4: 1927318454
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2422821535150386473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +150,10 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638742082971680011
+  lastModified: 638742170399268370
   FileSizes: []
   Exists: 1
---- !u!114 &-1279385627491769361
+--- !u!114 &-1894168941437265213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,23 +163,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ShipAlerts
+  m_Name: event:/Warning Beep
   m_EditorClassIdentifier: 
-  Path: event:/SFX/ShipAlerts
+  Path: event:/Warning Beep
   Guid:
-    Data1: -192086146
-    Data2: 1189850858
-    Data3: 1237488535
-    Data4: -75372085
+    Data1: 199951310
+    Data2: 1104813951
+    Data3: 501179058
+    Data4: -1527847265
   Banks:
   - {fileID: -2422821535150386473}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 63360
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,19 +196,25 @@ MonoBehaviour:
   - {fileID: 5532394258585426179}
   - {fileID: -2422821535150386473}
   EditorEvents:
-  - {fileID: 3413203824307311215}
-  - {fileID: 6032266503016217756}
-  - {fileID: -5878478649716520815}
-  - {fileID: -1279385627491769361}
-  - {fileID: 1194451217735879472}
+  - {fileID: -5684714679121421640}
+  - {fileID: -4990367000294321046}
+  - {fileID: -6066667664356738169}
+  - {fileID: -6736959122119339895}
+  - {fileID: 7498151150278537466}
+  - {fileID: 6848805236784274497}
+  - {fileID: 6756632631200183981}
+  - {fileID: 7992172102123803111}
+  - {fileID: -1894168941437265213}
+  - {fileID: 3866843578004259347}
+  - {fileID: -4745897673642959979}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2422821535150386473}
   StringsBanks:
   - {fileID: 5532394258585426179}
-  cacheTime: 638742082971690064
+  cacheTime: 638742170399278385
   cacheVersion: 131622
---- !u!114 &1194451217735879472
+--- !u!114 &3866843578004259347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,50 +224,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Explosion
+  m_Name: event:/Ambient Ship Bridge Signals and Alerts
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Explosion
+  Path: event:/Ambient Ship Bridge Signals and Alerts
   Guid:
-    Data1: 1146718704
-    Data2: 1143291725
-    Data3: -781162335
-    Data4: 1412768412
-  Banks:
-  - {fileID: -2422821535150386473}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5095
---- !u!114 &3413203824307311215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ShipEngine
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ShipEngine
-  Guid:
-    Data1: 1575835161
-    Data2: 1321145342
-    Data3: -723643989
-    Data4: -1533434202
+    Data1: 612935679
+    Data2: 1262499166
+    Data3: 196121510
+    Data4: 1245142190
   Banks:
   - {fileID: -2422821535150386473}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 124571
+  Length: 63360
 --- !u!114 &5532394258585426179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,12 +256,36 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638742082971690064
+  lastModified: 638742170399278385
   FileSizes:
   - Name: 
-    Value: 978
+    Value: 1374
   Exists: 1
---- !u!114 &6032266503016217756
+--- !u!114 &6669094590273304158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Thruster/Thruster Intensity
+  m_EditorClassIdentifier: 
+  Name: Thruster Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2836065092
+    data2: 3505733334
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6756632631200183981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,20 +295,102 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LandingThrust
+  m_Name: event:/Engine Startup and Idle
   m_EditorClassIdentifier: 
-  Path: event:/SFX/LandingThrust
+  Path: event:/Engine Startup and Idle
   Guid:
-    Data1: -258408398
-    Data2: 1213253444
-    Data3: -1108656968
-    Data4: 731033352
+    Data1: 642450890
+    Data2: 1123986751
+    Data3: 952803498
+    Data4: -789827056
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128071
+--- !u!114 &6848805236784274497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Maneuvering Thruster4
+  m_EditorClassIdentifier: 
+  Path: event:/Maneuvering Thruster4
+  Guid:
+    Data1: -706135374
+    Data2: 1223814521
+    Data3: 1524712340
+    Data4: 1273772563
   Banks:
   - {fileID: -2422821535150386473}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 2850
+--- !u!114 &7498151150278537466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Main Thruster
+  m_EditorClassIdentifier: 
+  Path: event:/Main Thruster
+  Guid:
+    Data1: -1991206515
+    Data2: 1128451425
+    Data3: -182157911
+    Data4: -573668881
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6669094590273304158}
+  MinDistance: 1
+  MaxDistance: 20
   Length: 7592
+--- !u!114 &7992172102123803111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Warning Pull Up
+  m_EditorClassIdentifier: 
+  Path: event:/Warning Pull Up
+  Guid:
+    Data1: 847804108
+    Data2: 1272873653
+    Data3: -1247303788
+    Data4: 34348496
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

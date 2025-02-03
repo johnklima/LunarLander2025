@@ -414,6 +414,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
+  - lunarlander/Build/Desktop/Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
