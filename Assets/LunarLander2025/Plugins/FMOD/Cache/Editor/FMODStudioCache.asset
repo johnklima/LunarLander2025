@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8501880211882046306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ShipAlerts
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ShipAlerts
+  Guid:
+    Data1: -192086146
+    Data2: 1189850858
+    Data3: 1237488535
+    Data4: -75372085
+  Banks:
+  - {fileID: -5601571852865718786}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 63360
 --- !u!114 &-5601571852865718786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,8 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638742047142555195
-  FileSizes:
-  - Name: Desktop
-    Value: 3308448
+  lastModified: 638740480100000000
+  FileSizes: []
   Exists: 1
 --- !u!114 &-5207967752746438293
 MonoBehaviour:
@@ -35,10 +60,10 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638742047142565168
+  lastModified: 638740480100000000
   FileSizes:
-  - Name: Desktop
-    Value: 974
+  - Name: 
+    Value: 978
   Exists: 1
 --- !u!114 &-4131908690818354410
 MonoBehaviour:
@@ -50,9 +75,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/backgroundEnviroment
+  m_Name: event:/Music/BackgroundEnviroment
   m_EditorClassIdentifier: 
-  Path: event:/Music/backgroundEnviroment
+  Path: event:/Music/BackgroundEnviroment
   Guid:
     Data1: 2130960503
     Data2: 1214826613
@@ -86,14 +111,14 @@ MonoBehaviour:
   - {fileID: 2839655026311024153}
   - {fileID: 6776038733056748724}
   - {fileID: -4131908690818354410}
-  - {fileID: 7206657067242345288}
   - {fileID: 1218773268145521553}
+  - {fileID: -8501880211882046306}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5601571852865718786}
   StringsBanks:
   - {fileID: -5207967752746438293}
-  cacheTime: 638742047142565168
+  cacheTime: 638740480100000000
   cacheVersion: 131622
 --- !u!114 &1218773268145521553
 MonoBehaviour:
@@ -121,7 +146,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5039
+  Length: 5095
 --- !u!114 &2839655026311024153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,35 +196,8 @@ MonoBehaviour:
   - {fileID: -5601571852865718786}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7592
---- !u!114 &7206657067242345288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LandingPad
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/LandingPad
-  Guid:
-    Data1: -1095199041
-    Data2: 1317475120
-    Data3: 283136914
-    Data4: 2081362138
-  Banks:
-  - {fileID: -5601571852865718786}
-  IsStream: 1
-  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 63360
+  Length: 7592
