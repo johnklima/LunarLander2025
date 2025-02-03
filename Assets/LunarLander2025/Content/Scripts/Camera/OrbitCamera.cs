@@ -42,7 +42,7 @@ public class OrbitCamera : MonoBehaviour
 
     #region Static Values
     private static OrbitCamera _instance;
-    public static  OrbitCamera Instance
+    public static OrbitCamera Instance
     {
         get
         {
