@@ -57,10 +57,14 @@ public class LanderController : MonoBehaviour
     private void OnEnable()
     {
         InputsManager.Player.ShipRotation.performed += ShipRotationStarted;
+        InputsManager.Player.ShipRotation.canceled += ShipRotationCanceled;
     }
+
+
     private void OnDisable()
     {
         InputsManager.Player.ShipRotation.performed -= ShipRotationStarted;
+        InputsManager.Player.ShipRotation.canceled += ShipRotationCanceled;
     }
     #endregion
 
@@ -70,6 +74,11 @@ public class LanderController : MonoBehaviour
         // changes the rotation based on the input vector2 value. 
         yaw = obj.ReadValue<Vector2>().x * rotationTorque;
         pitch = obj.ReadValue<Vector2>().y * rotationTorque;
+    }
+    private void ShipRotationCanceled(InputAction.CallbackContext obj)
+    {
+        yaw = 0;
+        pitch = 0;
     }
     #endregion
 }

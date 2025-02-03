@@ -6217,9 +6217,9 @@ MonoBehaviour:
   fuelEfficiency: 1
   upDirection: {x: 0, y: 0, z: 0}
   currentThrust: 0
-  maxThrust: 1
-  thrustBuildRate: 50
-  thrustDecayRate: 50
+  maxThrust: 10
+  thrustBuildRate: 10
+  thrustDecayRate: 10
   firePS: {fileID: 7482545707099474623}
   smokePS: {fileID: 3682578866398604044}
   bSmokePS: {fileID: 3288365561899075524}
@@ -6446,7 +6446,7 @@ MonoBehaviour:
   explosionRef: {fileID: 1152960345709224193}
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 0
   centerPoint: {fileID: 4806264207300807071}
   size: {x: 1, y: 3.5, z: 1}
   boxColor: {r: 1, g: 0, b: 0, a: 1}
