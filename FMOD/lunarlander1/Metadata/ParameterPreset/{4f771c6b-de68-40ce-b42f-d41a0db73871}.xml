@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4f771c6b-de68-40ce-b42f-d41a0db73871}">
+		<property name="name">
+			<value>Thruster Intensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9174a748-2630-43b1-b450-e1898784ab92}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{95bd04fe-0c73-43cf-8d88-b4bc5dae7a27}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{95bd04fe-0c73-43cf-8d88-b4bc5dae7a27}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.049999997019767761</value>
+		</property>
+	</object>
+</objects>

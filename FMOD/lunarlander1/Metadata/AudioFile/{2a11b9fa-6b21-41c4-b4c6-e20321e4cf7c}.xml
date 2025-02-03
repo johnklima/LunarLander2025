@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2a11b9fa-6b21-41c4-b4c6-e20321e4cf7c}">
+		<property name="assetPath">
+			<value>air-pump-short-1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.19301587301587303</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a3976c7-b066-4a3f-a838-5ad055b8a6dd}</destination>
+		</relationship>
+	</object>
+</objects>
