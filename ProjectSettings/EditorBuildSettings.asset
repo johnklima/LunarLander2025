@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Main Menu.unity
+    path: Assets/LunarLander2025/Content/Scenes/Main Menu.unity
     guid: d9cbc835410fc3046a6edba2770b78ce
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Level 1.unity
+    path: Assets/LunarLander2025/Content/Scenes/Level 1.unity
     guid: e795eedf3a1f23c42b897707f74ec136
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 58b25ffd9ccf6814cb15151bfbb50ac8,
