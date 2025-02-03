@@ -1,20 +1,15 @@
 #PlayButton:hover {
-    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Main%20Menu/Main%20Menu%20Play%20Button_Select.png?fileID=2800000&guid=c8d45c09392f2d44fb16974100282875&type=3#Main Menu Play Button_Select");
+    background-image: url("project://database/Assets/LunarLander2025/Content/UI/UI%20elements/Main%20Menu/Main%20Menu%20Play%20Button_Select.png?fileID=2800000&guid=c8d45c09392f2d44fb16974100282875&type=3#Main Menu Play Button_Select");
     -unity-background-image-tint-color: rgb(135, 57, 192);
 }
 
 #OptionsButton:hover {
     -unity-background-image-tint-color: rgb(135, 57, 192);
-    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Main%20Menu/Main%20Menu%20Options_Select.png?fileID=2800000&guid=b16d70c22cde6dd4683489487f43e655&type=3#Main Menu Options_Select");
+    background-image: url("project://database/Assets/LunarLander2025/Content/UI/UI%20elements/Main%20Menu/Main%20Menu%20Options_Select.png?fileID=2800000&guid=b16d70c22cde6dd4683489487f43e655&type=3#Main Menu Options_Select");
 }
 
 #QuitButton:hover {
-    background-image: url("project://database/Assets/UI%20Toolkit/UI%20elements/Main%20Menu/Main%20Menu%20Quit_Select.png?fileID=2800000&guid=3c0be6284576ab742a673b11157ce031&type=3#Main Menu Quit_Select");
-    -unity-background-image-tint-color: rgb(135, 57, 192);
-}
-
-<<<<<<< HEAD:Assets/UI Toolkit/UnityThemes/Main menu.uss
-#LevelSelectButton:hover {
+    background-image: url("project://database/Assets/LunarLander2025/Content/UI/UI%20elements/Main%20Menu/Main%20Menu%20Quit_Select.png?fileID=2800000&guid=3c0be6284576ab742a673b11157ce031&type=3#Main Menu Quit_Select");
     -unity-background-image-tint-color: rgb(135, 57, 192);
 }
 
@@ -33,9 +28,4 @@
 
 #Level3:hover {
     scale: 1.1 1.1;
-}
-
-=======
->>>>>>> c8b4ca7db05d843c3f3d80b2f116f592331f3608:Assets/LunarLander2025/Content/UI/UnityThemes/Main menu.uss
-.button {
 }
