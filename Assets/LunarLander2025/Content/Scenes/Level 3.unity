@@ -344,6 +344,132 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &425954740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425954741}
+  - component: {fileID: 425954742}
+  m_Layer: 0
+  m_Name: EngineIdleSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425954741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425954740}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8979227725441902768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425954742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425954740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 642450890
+      Data2: 1123986751
+      Data3: 952803498
+      Data4: -789827056
+    Path: event:/Engine Startup and Idle
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &437202173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437202174}
+  - component: {fileID: 437202175}
+  m_Layer: 0
+  m_Name: ExplosionSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437202174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437202173}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8979227725441902768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &437202175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437202173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2010649247
+      Data2: 1282135105
+      Data3: -341306220
+      Data4: 1141311280
+    Path: event:/Medium Explosion
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &448872360
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +919,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505702090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505702091}
+  - component: {fileID: 1505702092}
+  m_Layer: 0
+  m_Name: ThrusterSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505702091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505702090}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8979227725441902768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505702092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505702090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1991206515
+      Data2: 1128451425
+      Data3: -182157911
+      Data4: -573668881
+    Path: event:/Main Thruster
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: Thruster Intensity
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1640416543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1201,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2046009167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046009169}
+  - component: {fileID: 2046009168}
+  m_Layer: 0
+  m_Name: SideThruster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2046009168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046009167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -706135374
+      Data2: 1223814521
+      Data3: 1524712340
+      Data4: 1273772563
+    Path: event:/Maneuvering Thruster4
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &2046009169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046009167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8979227725441902768}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2093012243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,6 +1388,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7281851690508157314}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2139004919118337534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139004919118337533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0bb49fd0df0144a84ab7d08772535a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitEngineStart: {fileID: 425954742}
+  emitMainThruster: {fileID: 1505702092}
+  emitSideThruster: {fileID: 2046009168}
 --- !u!1001 &4399887041049804200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1241,6 +1510,11 @@ PrefabInstance:
       propertyPath: fuelBarUI
       value: 
       objectReference: {fileID: 768814345}
+    - target: {fileID: 5369534242873434002, guid: f28c74f2e3bd5e84f81254911e4d65e5,
+        type: 3}
+      propertyPath: emitMediumExplosion
+      value: 
+      objectReference: {fileID: 437202175}
     - target: {fileID: 5553499835503645741, guid: f28c74f2e3bd5e84f81254911e4d65e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,10 +1565,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6745135533807961560, guid: f28c74f2e3bd5e84f81254911e4d65e5,
+        type: 3}
+      propertyPath: emitMediumExplosion
+      value: 
+      objectReference: {fileID: 8979227725441902770}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 291425322680697641, guid: f28c74f2e3bd5e84f81254911e4d65e5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2139004919118337534}
   m_SourcePrefab: {fileID: 100100000, guid: f28c74f2e3bd5e84f81254911e4d65e5, type: 3}
 --- !u!1001 &8979227725441902767
 PrefabInstance:
@@ -1411,9 +1694,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 425954741}
+    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437202174}
+    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2046009169}
+    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1505702091}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6015013834047861158, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8979227725441902770}
   m_SourcePrefab: {fileID: 100100000, guid: 31006245e08cf9946a7245cc3a67ae79, type: 3}
+--- !u!4 &8979227725441902768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+    type: 3}
+  m_PrefabInstance: {fileID: 8979227725441902767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8979227725441902769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6015013834047861158, guid: 31006245e08cf9946a7245cc3a67ae79,
+    type: 3}
+  m_PrefabInstance: {fileID: 8979227725441902767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8979227725441902770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979227725441902769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -257957075
+      Data2: 1329490852
+      Data3: 1221366661
+      Data4: 1945736897
+    Path: event:/Ambient1 & Ambient Bridge Signals
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,67 +1,34 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using JetBrains.Annotations;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
+using static Unity.VisualScripting.Member;
 
-public class CellularAtomaton : MonoBehaviour
+public class CellularAutomaton : MonoBehaviour
 {
-
+    /// <summary>
+    /// Cellular Automaton Script 
+    /// </summary>
     // rules 0-255
-
+    
     public byte ruleNumb = 0;
     public int[] inArray;
     public int[] outArray;
-
-    public string[] pattern = { "111", "110", "101", "100", "011", "010", "001", "000" }; // ints representing a bit of information
-
-    public GameObject objPrefab;
-    public GameObject[] arrayPrefabs;
-
+    public string[] pattern = { "111", "110", "101", "100", "011", "010", "001", "000" };
     public int generation;
-    [Min(1)] public int gridWidth = 16;
-    public string strCompare = "";
-    public bool click = true;
-
-
-
-    // creating an empty array and converting the rule from number to bits
+    public int gridWidth;
+    public string strCompare;
     private void Start()
     {
         inArray = ByteToRuleConverter(ruleNumb);
-        outArray = EmptyArray(gridWidth);
-
     }
 
-    // when pressing click iterate the  generation
-    private void Update()
-    {
-        if (click == true)
-        {
-            outArray = Generator();
-            click = false;
-        }
-    }
-
-
-    int[] EmptyArray(int input)
-    {
-
-        int[] emptyArray = new int[input];
-        for (int i = 0; i < input; i++)
-        {
-            if (input / 2 == i)
-            {
-                emptyArray[i] = 1;
-            }
-            else
-            {
-                emptyArray[i] = 0;
-            }
-        }
-        return emptyArray;
-    }
-
-    int[] Generator() // void Generator() -> int[] Generator()  for debugging
+    void Generation()
     {
         // for loop describing the grid
         //TODO: create the Grid generation
@@ -69,65 +36,29 @@ public class CellularAtomaton : MonoBehaviour
         //call objectplacement
         int[] nextGen = new int[gridWidth];
 
-        for (int i = 0; i < gridWidth; i++)
+        for (int grid = 0; grid < gridWidth; grid++)
         {
-            /// New solution for the edges
-            /// using modulus to prevent index out of bounds of the array
-            int left = outArray[(i - 1 + gridWidth) % gridWidth];
-            int mid = outArray[(i + gridWidth) % gridWidth];
-            int right = outArray[(i + 1 + gridWidth) % gridWidth];
-
-            strCompare = "" + left + mid + right;
-
-            nextGen[i] = Rule(strCompare);
-
-            /*
-            if (i - 1 < 0)
+            if (grid - 1 < 0)
             {
-                Debug.Log("If");
-                strCompare = "" + outArray[gridWidth - 1] + outArray[i] + outArray[i + 1];
-
+                strCompare = "" + inArray[gridWidth] + inArray[grid] + inArray[grid + 1];
             }
-            else if (i == gridWidth - 1)
+            else if (grid + 1 > gridWidth)
             {
-                Debug.Log("Else If");
-                strCompare = "" + outArray[i - 1] + outArray[i] + outArray[0];
+                strCompare = "" + inArray[grid - 1] + inArray[grid] + inArray[0];
 
             }
             else
             {
-                Debug.Log("Else");
-                strCompare = "" + outArray[i - 1] + outArray[i] + outArray[i + 1];
-
+                strCompare = "" + inArray[grid - 1] + inArray[grid] + inArray[grid +1];
             }
-            Debug.Log(i);
-            */
-
-
+            nextGen[grid] = Rule(strCompare);
         }
-
-        //outArray = nextGen;
-        //ObjectPlacement();
-
-        return nextGen;
-
-
     }
 
     void ObjectPlacement()
     {
 
         //place objects within scene
-
-        for (int i = 0; i < gridWidth; i++)
-        {
-
-        }
-
-
-
-
-
     }
 
 
@@ -147,26 +78,24 @@ public class CellularAtomaton : MonoBehaviour
 
     public int Rule(string lmr)
     {
+        //converting input to string
+        
+
 
         //current pattern	111	110	101	100	011	010	001	000
         //TODO : simplify   111	110	101	100	011	010	001	000 to 1-8 
 
-
+        
 
         //using a string array for verifying the values
+       
 
-        // -1 for beeing stupic forgetting to add i++  creating crashes....
-        for (int i = 0; i <= 7; i++) // could go for a foreach loop, but then manually decleare an int variable for the count
+        for (int i  = 0; i < pattern.Length;) // could go for a foreach loop, but then manually decleare an int variable for the count
         {
             //Debug.Log(pattern[i] + " " + test + " " + temp);
-            if (pattern[i] == lmr)
-            {
-
-                return inArray[i];
-            }
-
+            if (pattern[i] == lmr ) return inArray[i]; 
+           
         }
-        return 0;
         /*
         if (right == 1 & middle == 1 & left == 1) { return temp[0]; }
         if (right == 1 & middle == 1 & left == 0) { return temp[1]; }
@@ -179,13 +108,13 @@ public class CellularAtomaton : MonoBehaviour
         */
 
 
+        
 
-
-
+        return 0;
 
 
     }
-
+    
 
 
 
