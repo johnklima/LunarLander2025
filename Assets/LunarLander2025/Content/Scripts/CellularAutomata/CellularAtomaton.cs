@@ -9,9 +9,11 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using static Unity.VisualScripting.Member;
 
-public class CellularAtomaton : MonoBehaviour
+public class CellularAutomaton : MonoBehaviour
 {
-
+    /// <summary>
+    /// Cellular Automaton Script 
+    /// </summary>
     // rules 0-255
     
     public byte ruleNumb = 0;
