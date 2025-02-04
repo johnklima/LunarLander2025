@@ -134,7 +134,7 @@ public class WinAndLose : MonoBehaviour
             var currentSceneID = SceneManager.GetActiveScene().buildIndex;
             //FMODManager.Instance.StopAllConstant2DSound();
             SceneManager.LoadScene(currentSceneID);
-        });    
+        });
     }
 
     private void OnNextLevelButtonClick()

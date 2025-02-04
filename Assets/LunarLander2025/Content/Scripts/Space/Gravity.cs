@@ -47,13 +47,19 @@ public class Gravity : MonoBehaviour, IPhysicsObject
     #endregion
 
     #region Private Values
+    // References
     private LanderController landerController;
+    private Thrusters thrusters;
+
+    // Values 
+    private const float BrakingForce = 3f;               // Braking constant that you can adjust as needed
     #endregion
 
     #region Mono
     private void Awake()
     {
         landerController = GetComponent<LanderController>();
+        thrusters = GetComponent<Thrusters>();
     }
     void Update()
     {
@@ -75,24 +81,26 @@ public class Gravity : MonoBehaviour, IPhysicsObject
 
         float deltaTime = Time.deltaTime * timeScalar;
 
-        // If you are outside the atmosphere the direction is Transform.Up and when you enter the atmosphere the direction is traced directly to the planet.
         Vector3 direction = Planet == null ? -transform.up : transform.position - Planet.transform.position;
-
-        // Gravitational acceleration
         Vector3 gravityAcceleration = direction.normalized * GRAVITY_CONSTANT;
 
-        // Total acceleration
-        acceleration = gravityAcceleration + thrust / mass;
+        if (thrusters.ThrusterState == ThrusterState.On)
+        {
+            // Full throttle when the thruster is on
+            acceleration = gravityAcceleration + thrust / mass;
 
-        // Apply dragging
-        acceleration -= velocity * Drag;
+            // Reset thrust after application
+            thrust = Vector3.zero;
+        }
+        else
+        {
+            // If the propeller is off, apply braking force
+            acceleration = gravityAcceleration - velocity * Drag - velocity.normalized * BrakingForce;
+        }
 
         // Update speed and position
         velocity += acceleration * deltaTime;
         transform.position += velocity * deltaTime;
-
-        // Reset the thrust after application
-        thrust = Vector3.zero;
     }
     void HandleLose()
     {

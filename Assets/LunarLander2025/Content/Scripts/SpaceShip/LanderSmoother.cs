@@ -10,12 +10,6 @@ public class LanderSmoother : MonoBehaviour
     public GameObject explosionPrefab;
     public Transform explosionRef;
 
-   
-    public FMODUnity.StudioEventEmitter emitMediumExplosion;
-
-
-
-
     [Header("Collision Check")]
     public LayerMask collisionLayers;
     public Transform centerPoint;
@@ -30,6 +24,10 @@ public class LanderSmoother : MonoBehaviour
     private Action OnLandedSuccess;
     #endregion
 
+    #region Propeties
+    public bool IsAligning { get; private set; } = false;
+    #endregion
+
     #region Private Values
     // References
     private LanderController landerController;
@@ -38,7 +36,6 @@ public class LanderSmoother : MonoBehaviour
 
     // Values
     private Transform targetCenter;
-    private bool isAligning = false;
     private bool collisionHandled = false;
     private Vector3 landingPoint;
     private ParticleSystem internalSmoke;
@@ -61,10 +58,14 @@ public class LanderSmoother : MonoBehaviour
     {
         OnLandedSuccess -= OnLandSuccess;
     }
+    private void Start()
+    {
+        InputsManager.Player.OnOffThruster.Enable();
+    }
     void FixedUpdate()
     {
         if (!collisionHandled) HandleColliderCollisions();
-        if (isAligning) AlignWithTarget();
+        if (IsAligning) AlignWithTarget();
     }
     #endregion
 
@@ -92,7 +93,7 @@ public class LanderSmoother : MonoBehaviour
 
                     landerController.PlayerState = PlayerState.Grounded;
                     gravity.ResetValues();
-                    isAligning = true;
+                    IsAligning = true;
                     collisionHandled = true; // Marking that a valid collision has been handled
                 }
             }
@@ -128,7 +129,7 @@ public class LanderSmoother : MonoBehaviour
 
                             landerController.PlayerState = PlayerState.Grounded;
                             gravity.ResetValues();
-                            isAligning = true;
+                            IsAligning = true;
                             collisionHandled = true; // Marking that a valid collision has been handled
                         }
                         else
@@ -159,10 +160,10 @@ public class LanderSmoother : MonoBehaviour
             Quaternion.Lerp(transform.parent.rotation, targetCenter.rotation, alignmentSpeed * Time.deltaTime));
 
         // Check whether the alignment has been completed
-        if (Vector3.Distance(transform.parent.position, targetCenter.position) < 1.00f &&
+        if (Vector3.Distance(transform.parent.position, targetCenter.position) < 0.01f &&
             Quaternion.Angle(transform.parent.rotation, targetCenter.rotation) < 0.1f)
         {
-            isAligning = false;
+            IsAligning = false;
             thrusters.ThrusterState = ThrusterState.Off;
             OnLandedSuccess?.Invoke();
 
@@ -202,15 +203,12 @@ public class LanderSmoother : MonoBehaviour
         externalSmoke = newVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
         newVFX.transform.up = transform.up;
 
-
-      
+        //FMODManager.Instance.StopConstant2DSound("SFX/ShipEngine");
+        //FMODManager.Instance.PlayConstant2DSound("SFX/LandingThrust");
     }
     private void InstantiateExplosionEffect()
     {
-        ////FMODManager.Instance.PlayOneShot2DSound("event:/Medium Explosion");
-
-        Debug.Log("EXPLODE");
-        
+        //FMODManager.Instance.PlayOneShot2DSound("SFX/Explosion");
         Instantiate(explosionPrefab, explosionRef.position, Quaternion.identity);
     }
     #endregion
@@ -246,7 +244,7 @@ public class LanderSmoother : MonoBehaviour
         internalEmission.rateOverTime = 0;
         externalEmission.rateOverTime = 0;
 
-        //FMODManager.Instance.StopConstant2DSound("event:/Main Thruster");
+        //FMODManager.Instance.StopConstant2DSound("SFX/LandingThrust");
         Destroy(internalSmoke.gameObject);
     }
     #endregion

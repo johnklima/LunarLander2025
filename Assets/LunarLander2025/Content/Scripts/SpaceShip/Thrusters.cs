@@ -43,6 +43,7 @@ public class Thrusters : MonoBehaviour
     // References
     private Gravity gravity;
     private FuelTank fuelTank;
+    private LanderSmoother landerSmoother;
     private LanderController landerController;
 
     // Values
@@ -55,11 +56,12 @@ public class Thrusters : MonoBehaviour
     {
         gravity = GetComponent<Gravity>();
         fuelTank = GetComponent<FuelTank>();
+        landerSmoother = FindAnyObjectByType<LanderSmoother>();
         landerController = GetComponent<LanderController>();
     }
     void Update()
     {
-        isThrusterOn = InputsManager.Player.OnOffThruster.ReadValue<float>() > 0.1f;
+        isThrusterOn = !landerSmoother.IsAligning ? InputsManager.Player.OnOffThruster.ReadValue<float>() > 0.1f : true;
         ThrusterState = isThrusterOn ? ThrusterState.On : ThrusterState.Off;
 
         // Thrust control

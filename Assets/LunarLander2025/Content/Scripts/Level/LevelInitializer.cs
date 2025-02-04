@@ -57,7 +57,7 @@ public class LevelInitializer : MonoBehaviour
         // Generation of the planet
         GameObject planet = Instantiate(
             curretData.planetPrefab,
-            planetHolder.transform.position, 
+            planetHolder.transform.position,
             curretData.planetPrefab.transform.rotation);
 
         planet.transform.SetParent(planetHolder);
