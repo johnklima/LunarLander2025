@@ -30,12 +30,12 @@ MonoBehaviour:
     planetPrefab: {fileID: 4107307214093643618, guid: cfca5d2d97bdacf4087b619380950310,
       type: 3}
     shipMaxFuel: 60
-    zenitBlend: 1.5
-    nadirBlend: 4.5
-    horizontBlend: 3
+    zenitBlend: 4.6
+    nadirBlend: 3.9
+    horizontBlend: 5.8
     skyColor: {r: 0, g: 0, b: 0, a: 1}
     groundColor: {r: 0, g: 0, b: 0, a: 0}
-    horizontColor: {r: 0.26415092, g: 0.005069346, b: 0, a: 1}
+    horizontColor: {r: 0.3679245, g: 0.01516988, b: 0.008677464, a: 1}
     starHeight: 139.7
     starPower: 73.8
     starIntensity: 231.9
