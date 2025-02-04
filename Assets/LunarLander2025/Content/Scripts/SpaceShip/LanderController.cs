@@ -28,7 +28,6 @@ public class LanderController : MonoBehaviour
 
     #region Private Values
     // References
-    private Thrusters thrusters;
     private Pause pause;
 
     // Values
@@ -38,7 +37,6 @@ public class LanderController : MonoBehaviour
     #region Mono
     private void Awake()
     {
-        thrusters = GetComponent<Thrusters>();
         pause = FindAnyObjectByType<Pause>();
     }
     public void Update()
@@ -72,8 +70,8 @@ public class LanderController : MonoBehaviour
     private void ShipRotationStarted(InputAction.CallbackContext obj)
     {
         // changes the rotation based on the input vector2 value. 
-        yaw = obj.ReadValue<Vector2>().x * rotationTorque;
-        pitch = obj.ReadValue<Vector2>().y * rotationTorque;
+        yaw = -obj.ReadValue<Vector2>().x * rotationTorque;
+        pitch = -obj.ReadValue<Vector2>().y * rotationTorque;
     }
     #endregion
 }
