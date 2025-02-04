@@ -40,7 +40,7 @@ MonoBehaviour:
     starPower: 73.8
     starIntensity: 231.9
   - name: Level 3
-    planetPrefab: {fileID: 6591764479479213157, guid: 98dc91db1cb40b442aab327aa2a34e8c,
+    planetPrefab: {fileID: 3073919765049721749, guid: 942174712696b8b4dbf2bb3c60c3f6ab,
       type: 3}
     shipMaxFuel: 80
     zenitBlend: 4.8

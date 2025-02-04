@@ -1921,6 +1921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alien Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 1093668363752244217, guid: cd14900b04e4ad54fb48d2da913785e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3824174516771074352, guid: cd14900b04e4ad54fb48d2da913785e9,
         type: 3}
       propertyPath: m_LocalPosition.x
