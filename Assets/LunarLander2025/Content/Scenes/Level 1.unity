@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 378746019}
   - component: {fileID: 378746020}
   m_Layer: 0
-  m_Name: TrusterSound
+  m_Name: ThrusterSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1777,8 +1777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emitEngineStart: {fileID: 1776286850}
-  emitMainTruster: {fileID: 378746020}
-  emitSideTruster: {fileID: 811949509}
+  emitMainThruster: {fileID: 378746020}
+  emitSideThruster: {fileID: 811949509}
 --- !u!1001 &4172876187637694601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2099,15 +2099,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 378746019}
-    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1831266997}
     - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 811949508}
+    - targetCorrespondingSourceObject: {fileID: 8643156874015491081, guid: 31006245e08cf9946a7245cc3a67ae79,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 378746019}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6015013834047861158, guid: 31006245e08cf9946a7245cc3a67ae79,
         type: 3}

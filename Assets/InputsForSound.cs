@@ -6,8 +6,8 @@ public class InputsForSound : MonoBehaviour
 {
 
     public FMODUnity.StudioEventEmitter emitEngineStart;
-    public FMODUnity.StudioEventEmitter emitMainTruster;
-    public FMODUnity.StudioEventEmitter emitSideTruster;
+    public FMODUnity.StudioEventEmitter emitMainThruster;
+    public FMODUnity.StudioEventEmitter emitSideThruster;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +22,14 @@ public class InputsForSound : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space ))
         {
-            emitMainTruster.Play();
+            emitMainThruster.Play();
             intensity += Time.deltaTime;
 
         }
         if (Input.GetKey(KeyCode.Space))
         {
             //while held
-            emitMainTruster.SetParameter("Thruster Intensity", intensity);
+            emitMainThruster.SetParameter("Thruster Intensity", intensity);
             intensity += Time.deltaTime;
             if (intensity > 1.0f)
                 intensity = 1.0f; 
@@ -37,7 +37,7 @@ public class InputsForSound : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            emitMainTruster.Stop();
+            emitMainThruster.Stop();
             intensity = 0;
         }
 
@@ -53,13 +53,13 @@ public class InputsForSound : MonoBehaviour
 
         if (sideInputOn)
         {
-            emitSideTruster.Play();
+            emitSideThruster.Play();
         }
 
 
         if (sideInputOff)
         {
-            emitSideTruster.Stop();
+            emitSideThruster.Stop();
         }
 
     }
