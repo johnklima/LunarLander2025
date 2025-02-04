@@ -112,19 +112,28 @@ public class MainMenu : MonoBehaviour
     private void OnLevel1ButtonClick()
     {
         Debug.Log("Level 1 loading");
-        SceneManager.LoadScene(1);
+        FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene(1);
+        });
     }
 
     private void OnLevel2ButtonClick()
     {
         Debug.Log("Level 2 loading");
-        SceneManager.LoadScene(2);
+        FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene(2);
+        });
     }
 
     private void OnLevel3ButtonClick()
     {
         Debug.Log("Level 3 loading");
-        SceneManager.LoadScene(3);
+        FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
+        {
+            SceneManager.LoadScene(3);
+        });
     }
 
 
