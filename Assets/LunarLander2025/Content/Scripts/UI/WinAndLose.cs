@@ -121,7 +121,7 @@ public class WinAndLose : MonoBehaviour
         Debug.Log("Back to main menu");
         FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
         {
-            FMODManager.Instance.StopAllConstant2DSound();
+            //FMODManager.Instance.StopAllConstant2DSound();
             SceneManager.LoadScene(0);
         });
     }
@@ -132,7 +132,7 @@ public class WinAndLose : MonoBehaviour
         FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
         {
             var currentSceneID = SceneManager.GetActiveScene().buildIndex;
-            FMODManager.Instance.StopAllConstant2DSound();
+            //FMODManager.Instance.StopAllConstant2DSound();
             SceneManager.LoadScene(currentSceneID);
         });    
     }
@@ -143,7 +143,7 @@ public class WinAndLose : MonoBehaviour
         FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
         {
             var nextSceneID = SceneManager.GetActiveScene().buildIndex + 1;
-            FMODManager.Instance.StopAllConstant2DSound();
+            //FMODManager.Instance.StopAllConstant2DSound();
             SceneManager.LoadScene(nextSceneID);
         });
     }

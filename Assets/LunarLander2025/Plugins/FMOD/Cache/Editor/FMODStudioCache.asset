@@ -122,10 +122,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Medium Explosion
   Guid:
-    Data1: 309132287
-    Data2: 1326202987
-    Data3: 1422605740
-    Data4: 1927318454
+    Data1: -2010649247
+    Data2: 1282135105
+    Data3: -341306220
+    Data4: 1141311280
   Banks:
   - {fileID: -2422821535150386473}
   IsStream: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 6350
 --- !u!114 &-2422821535150386473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,10 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638742661575382753
-  FileSizes: []
+  lastModified: 638742781375770085
+  FileSizes:
+  - Name: Desktop
+    Value: 3630976
   Exists: 1
 --- !u!114 &-1894168941437265213
 MonoBehaviour:
@@ -207,12 +209,13 @@ MonoBehaviour:
   - {fileID: -1894168941437265213}
   - {fileID: 3866843578004259347}
   - {fileID: -4745897673642959979}
+  - {fileID: 4012410314833366742}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2422821535150386473}
   StringsBanks:
   - {fileID: 5532394258585426179}
-  cacheTime: 638742661575392762
+  cacheTime: 638742781375790445
   cacheVersion: 131622
 --- !u!114 &3866843578004259347
 MonoBehaviour:
@@ -241,6 +244,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 63360
+--- !u!114 &4012410314833366742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Medium Explosion old
+  m_EditorClassIdentifier: 
+  Path: event:/Medium Explosion old
+  Guid:
+    Data1: 309132287
+    Data2: 1326202987
+    Data3: 1422605740
+    Data4: 1927318454
+  Banks:
+  - {fileID: -2422821535150386473}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5532394258585426179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,10 +286,10 @@ MonoBehaviour:
   Path: FMOD/lunarlander/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638742661575392762
+  lastModified: 638742781375790445
   FileSizes:
-  - Name: 
-    Value: 1374
+  - Name: Desktop
+    Value: 1420
   Exists: 1
 --- !u!114 &6669094590273304158
 MonoBehaviour:

@@ -8,20 +8,21 @@ public class FMODManager : MonoBehaviour
     #endregion
 
     #region Static Values
-    private static FMODManager _instance;
-    public static FMODManager Instance
+    /*
+    private static //FMODManager _instance;
+    public static //FMODManager Instance
     {
         get
         {
             // If the instance is null, an attempt is made to find an existing one.
             if (_instance == null)
             {
-                _instance = FindObjectOfType<FMODManager>();
+                _instance = FindObjectOfType<//FMODManager>();
 
                 // If not found, an exception is thrown
                 if (_instance == null)
                 {
-                    throw new System.Exception("No instance of FMODManager was found in the scene.");
+                    throw new System.Exception("No instance of //FMODManager was found in the scene.");
                 }
             }
             return _instance;
@@ -86,5 +87,7 @@ public class FMODManager : MonoBehaviour
             tempInstance.Instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
+    */
     #endregion
+    
 }

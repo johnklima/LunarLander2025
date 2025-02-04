@@ -10,6 +10,12 @@ public class LanderSmoother : MonoBehaviour
     public GameObject explosionPrefab;
     public Transform explosionRef;
 
+   
+    public FMODUnity.StudioEventEmitter emitMediumExplosion;
+
+
+
+
     [Header("Collision Check")]
     public LayerMask collisionLayers;
     public Transform centerPoint;
@@ -196,12 +202,15 @@ public class LanderSmoother : MonoBehaviour
         externalSmoke = newVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
         newVFX.transform.up = transform.up;
 
-        FMODManager.Instance.StopConstant2DSound("event:/Engine Startup and Idle");
-        FMODManager.Instance.PlayConstant2DSound("event:/Main Thruster");
+
+      
     }
     private void InstantiateExplosionEffect()
     {
-        FMODManager.Instance.PlayOneShot2DSound("event:/Medium Explosion");
+        ////FMODManager.Instance.PlayOneShot2DSound("event:/Medium Explosion");
+
+        Debug.Log("EXPLODE");
+        
         Instantiate(explosionPrefab, explosionRef.position, Quaternion.identity);
     }
     #endregion
@@ -237,7 +246,7 @@ public class LanderSmoother : MonoBehaviour
         internalEmission.rateOverTime = 0;
         externalEmission.rateOverTime = 0;
 
-        FMODManager.Instance.StopConstant2DSound("event:/Main Thruster");
+        //FMODManager.Instance.StopConstant2DSound("event:/Main Thruster");
         Destroy(internalSmoke.gameObject);
     }
     #endregion

@@ -157,7 +157,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
         FadeManager.Instance.FadeInOut(Color.black, 1f, 1f, () =>
         {
-            FMODManager.Instance.StopAllConstant2DSound();
+            //FMODManager.Instance.StopAllConstant2DSound();
             SceneManager.LoadScene(0);
         });
 

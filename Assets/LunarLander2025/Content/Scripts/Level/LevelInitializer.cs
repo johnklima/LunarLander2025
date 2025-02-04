@@ -77,9 +77,9 @@ public class LevelInitializer : MonoBehaviour
         skyMaterial.SetFloat("_StarIntesity", curretData.starIntensity);
 
         // Sound initialization
-        FMODManager.Instance.PlayConstant2DSound("Music/BackgroundEnviroment");
-        FMODManager.Instance.PlayConstant2DSound("SFX/ShipEngine");
-        FMODManager.Instance.PlayConstant2DSound("SFX/ShipAlerts");
+        //FMODManager.Instance.PlayConstant2DSound("Music/BackgroundEnviroment");
+        //FMODManager.Instance.PlayConstant2DSound("SFX/ShipEngine");
+        //FMODManager.Instance.PlayConstant2DSound("SFX/ShipAlerts");
     }
     private GameObject FindInHierarchy(GameObject parent, string name)
     {
