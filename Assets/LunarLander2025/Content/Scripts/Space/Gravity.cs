@@ -37,7 +37,7 @@ public class Gravity : MonoBehaviour, IPhysicsObject
     public float timeScalar = 1.0f;
 
     public FMODUnity.StudioEventEmitter emitMediumExplosion;
-  
+    public FMODUnity.StudioEventEmitter emitThrusters;
 
     #endregion
 
@@ -105,8 +105,8 @@ public class Gravity : MonoBehaviour, IPhysicsObject
     }
     private void InstantiateExplosionEffect()
     {
-        //FMODManager.Instance.PlayOneShot2DSound("SFX/Explosion");
-
+        //<JK> just fix it
+        emitThrusters.Stop();
         emitMediumExplosion.Play();
         Instantiate(explosionPrefab, explosionRef.position, Quaternion.identity);
     }
