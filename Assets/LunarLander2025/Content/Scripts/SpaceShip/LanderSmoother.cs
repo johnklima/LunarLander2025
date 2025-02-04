@@ -159,7 +159,7 @@ public class LanderSmoother : MonoBehaviour
             Quaternion.Lerp(transform.parent.rotation, targetCenter.rotation, alignmentSpeed * Time.deltaTime));
 
         // Check whether the alignment has been completed
-        if (Vector3.Distance(transform.parent.position, targetCenter.position) < 0.01f &&
+        if (Vector3.Distance(transform.parent.position, targetCenter.position) < 1.00f &&
             Quaternion.Angle(transform.parent.rotation, targetCenter.rotation) < 0.1f)
         {
             isAligning = false;
