@@ -57,16 +57,11 @@ public class Thrusters : MonoBehaviour
         fuelTank = GetComponent<FuelTank>();
         landerController = GetComponent<LanderController>();
     }
-    private void OnEnable()
-    {
-        InputsManager.Player.OnOffThruster.performed += OnTurnOnAndOff;
-    }
-    private void OnDisable()
-    {
-        InputsManager.Player.OnOffThruster.performed -= OnTurnOnAndOff;
-    }
     void Update()
     {
+        isThrusterOn = InputsManager.Player.OnOffThruster.ReadValue<float>() > 0.1f;
+        ThrusterState = isThrusterOn ? ThrusterState.On : ThrusterState.Off;
+
         // Thrust control
         float targetThrust = 0f;
 
@@ -171,15 +166,6 @@ public class Thrusters : MonoBehaviour
 
         // Ensure the emission rate is set to 0 at the end
         emission.rateOverTime = 0;
-    }
-    #endregion
-
-    #region Callbacks
-    public void OnTurnOnAndOff(InputAction.CallbackContext context)
-    {
-        if (!context.performed) return;
-        isThrusterOn = !isThrusterOn;
-        ThrusterState = isThrusterOn ? ThrusterState.On : ThrusterState.Off;
     }
     #endregion
 }
