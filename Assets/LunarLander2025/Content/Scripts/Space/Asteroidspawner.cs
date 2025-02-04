@@ -5,15 +5,18 @@ using UnityEngine;
 public class Asteroidspawner : MonoBehaviour
 {
     public GameObject[] meteorPrefabs; // Place to put your meteors/rock prefabs
-    public Transform planetTransform; 
+    public Transform planetTransform;  // The transform of the Gameobject(Planet)
     public float spawnInterval = 2f;   // spawntime
-    public float orbitRadiusMin = 20f; 
-    public float orbitRadiusMax = 60f; 
-    public float orbitSpeedMin = 0.1f; 
-    public float orbitSpeedMax = 1.5f; 
-    public float meteorLifetime = 10f;
+    public float orbitRadiusMin = 20f; // Min orbit radius
+    public float orbitRadiusMax = 60f; // Max orbit radius
+    public float orbitSpeedMin = 0.1f; // Min orbit speed
+    public float orbitSpeedMax = 1.5f; // Max orbit speed
+    public float meteorLifetime = 10f; //Time before meteor despawn
 
     private float timer;
+
+    /* Create an empty GameObject, Attach the script to it, In the inspector drop your prefabs in the meteorprefab array,
+      drop the planet in the planetTransform array, change the spwaning and orbiting as needed */
 
     void Update()
     {
@@ -28,8 +31,8 @@ public class Asteroidspawner : MonoBehaviour
             GameObject meteorPrefab = meteorPrefabs[randomIndex];
 
             
-            float orbitRadius = Random.Range(orbitRadiusMin, orbitRadiusMax);//random radius the meteor orbits
-            float orbitSpeed = Random.Range(orbitSpeedMin, orbitSpeedMax);//random speed the meteor have
+            float orbitRadius = Random.Range(orbitRadiusMin, orbitRadiusMax); //random radius the meteor orbits
+            float orbitSpeed = Random.Range(orbitSpeedMin, orbitSpeedMax);    //random speed the meteor have
 
             //random spawn points inside of the orbitRadius Min-Max
             float angle = Random.Range(25f, 9 * Mathf.PI);
@@ -38,7 +41,7 @@ public class Asteroidspawner : MonoBehaviour
             // this spawns the meteor
             GameObject meteor = Instantiate(meteorPrefab, initialPosition, Quaternion.identity);
 
-            
+            //Starts a co routine to orbiting and the destruction
             StartCoroutine(OrbitAndDestroy(meteor, orbitSpeed, orbitRadius));
             
            
@@ -54,10 +57,11 @@ public class Asteroidspawner : MonoBehaviour
 
        
         {
-            
+            //the orbits position
             angle += orbitSpeed * Time.deltaTime;
             Vector3 orbitPosition = planetTransform.position + new Vector3(Mathf.Cos(angle), 0f, Mathf.Sin(angle)) * orbitRadius;
 
+            //Meteor position
             meteor.transform.position = orbitPosition;
 
             elapsedTime += Time.deltaTime;
@@ -65,7 +69,7 @@ public class Asteroidspawner : MonoBehaviour
 
             yield return null; 
         }
-
+        //destroys the meteor
         Destroy(meteor);
     }
 
