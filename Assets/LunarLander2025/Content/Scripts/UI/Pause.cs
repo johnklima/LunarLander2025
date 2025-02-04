@@ -52,6 +52,10 @@ public class Pause : MonoBehaviour
     }
     #endregion
 
+    #region Properties
+    public bool IsGamePause { get; private set; } = false;
+    #endregion
+
     #region Private Fields
     private DepthOfField depthOfField;
     private FuelBar fuelBar;
@@ -69,9 +73,6 @@ public class Pause : MonoBehaviour
     private Button _mainmenuButton;
     private Button _quitButton;
     private Button _optionsButton;
-
-    // Values
-    private bool isGamePause = false;
     #endregion
 
     #region Mono
@@ -110,9 +111,9 @@ public class Pause : MonoBehaviour
     private void PauseHandler(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        isGamePause = !isGamePause;
+        IsGamePause = !IsGamePause;
 
-        if (isGamePause)
+        if (IsGamePause)
         {
             _PauseUI.style.display = DisplayStyle.Flex;
             OrbitCamera.Instance.AllowCameraManagment(false);
@@ -123,7 +124,7 @@ public class Pause : MonoBehaviour
             OnPause?.Invoke();
             Debug.Log("Pause");
         }
-        else if (!isGamePause)
+        else if (!IsGamePause)
         {
             _PauseUI.style.display = DisplayStyle.None;
             OrbitCamera.Instance.AllowCameraManagment(true);
@@ -137,7 +138,7 @@ public class Pause : MonoBehaviour
     }
     private void OnContinueButtonClick()
     {
-        isGamePause = !isGamePause;
+        IsGamePause = !IsGamePause;
         _PauseUI.style.display = DisplayStyle.None;
         fuelBar.OnResumeHandler();
         OrbitCamera.Instance.AllowCameraManagment(true);

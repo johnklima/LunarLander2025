@@ -29,6 +29,7 @@ public class LanderController : MonoBehaviour
     #region Private Values
     // References
     private Thrusters thrusters;
+    private Pause pause;
 
     // Values
     private Vector3 curretRot;
@@ -38,9 +39,13 @@ public class LanderController : MonoBehaviour
     private void Awake()
     {
         thrusters = GetComponent<Thrusters>();
+        pause = FindAnyObjectByType<Pause>();
     }
     public void Update()
     {
+
+        if (pause.IsGamePause) return;
+
         // adding to the rotation each frame
         curretRot.x += pitch * Time.deltaTime;
         curretRot.y += roll * Time.deltaTime;
@@ -51,20 +56,15 @@ public class LanderController : MonoBehaviour
     }
     public void LateUpdate()
     {
-        if (thrusters.ThrusterState == ThrusterState.Off) return;
         curretRot = Vector3.Lerp(curretRot, Vector3.zero, 0.003f);
     }
     private void OnEnable()
     {
         InputsManager.Player.ShipRotation.performed += ShipRotationStarted;
-        InputsManager.Player.ShipRotation.canceled += ShipRotationCanceled;
     }
-
-
     private void OnDisable()
     {
         InputsManager.Player.ShipRotation.performed -= ShipRotationStarted;
-        InputsManager.Player.ShipRotation.canceled += ShipRotationCanceled;
     }
     #endregion
 
@@ -74,11 +74,6 @@ public class LanderController : MonoBehaviour
         // changes the rotation based on the input vector2 value. 
         yaw = obj.ReadValue<Vector2>().x * rotationTorque;
         pitch = obj.ReadValue<Vector2>().y * rotationTorque;
-    }
-    private void ShipRotationCanceled(InputAction.CallbackContext obj)
-    {
-        yaw = 0;
-        pitch = 0;
     }
     #endregion
 }
