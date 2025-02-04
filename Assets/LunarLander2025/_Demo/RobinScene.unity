@@ -154,8 +154,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e8bc667f566164696f86fa7fa582b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clicker: 0
   ruleNumb: 30
+  inArray: 
+  outArray: 
+  pattern:
+  - 111
+  - 110
+  - 101
+  - 100
+  - 011
+  - 010
+  - 001
+  - 000
+  generation: 0
+  gridWidth: 16
+  strCompare: 
+  click: 0
 --- !u!65 &476969177
 BoxCollider:
   m_ObjectHideFlags: 0
