@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 2.573, y: -1.069, z: 0.03}
   m_LocalScale: {x: 0.00015750245, y: 0.00015750245, z: 0.00015750245}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3875546518199150583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0.718, y: 3.164, z: -107.355}
 --- !u!33 &2965415578613003009
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PolyMesh:
-    name: PolybrushMesh-91020
+    name: PolybrushMesh46476
     vertices:
     - {x: -511.03308, y: -126.843704, z: -254.62602}
     - {x: -511.03308, y: -126.843704, z: -765.659}
@@ -30249,3 +30250,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2535.322, y: 5138.162, z: 2287.4634}
   m_Center: {x: -0.00026784203, y: -493.49664, z: -314.52664}
+--- !u!1 &5387708306233143500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3875546518199150583}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3875546518199150583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387708306233143500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.018531732, y: -0.021397918, z: 0.80547297, w: 0.59195614}
+  m_LocalPosition: {x: 672, y: -2625, z: -806}
+  m_LocalScale: {x: 6349.1064, y: 6349.1055, z: 6349.1084}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1042942764296944007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
