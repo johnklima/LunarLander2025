@@ -41,14 +41,14 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _HorizonBlend: 5.8
-    - _NadirBlend: 3.9
+    - _HorizonBlend: 0.01
+    - _NadirBlend: 8.6
     - _StarHeight: 139.7
-    - _StarIntesity: 231.9
-    - _StarPower: 73.8
-    - _ZenithBlend: 4.6
+    - _StarIntesity: 199.13
+    - _StarPower: 58
+    - _ZenithBlend: 10.4
     m_Colors:
     - _GroundColor: {r: 0, g: 0, b: 0, a: 0}
-    - _HorizonColor: {r: 0.3679245, g: 0.01516988, b: 0.008677464, a: 1}
-    - _SkyColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HorizonColor: {r: 0, g: 0.05882353, b: 0.16078432, a: 0}
+    - _SkyColor: {r: 0, g: 0.007843138, b: 0.019607844, a: 1}
   m_BuildTextureStacks: []
