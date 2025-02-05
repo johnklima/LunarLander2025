@@ -173,12 +173,16 @@ public class PointsGenerator : MonoBehaviour
         totalTriangles = triangles.Length / 3;
         Progress = 0f;
 
+#if UNITY_EDITOR
         EditorApplication.update += EditorUpdate;
+#endif
     }
     public void CancelGeneration()
     {
         IsGenerating = false;
+#if UNITY_EDITOR
         EditorApplication.update -= EditorUpdate;
+#endif
         SurfacePoints.Clear();
         Progress = 0.0f;
         Debug.Log("Generation cancelled and memory cleared.");
@@ -240,12 +244,14 @@ public class PointsGenerator : MonoBehaviour
             Gizmos.DrawSphere(point, pointSize);
         }
     }
+#endif
     private void RepaintInspector()
     {
+#if UNITY_EDITOR
         EditorUtility.SetDirty(this);
         UnityEditorInternal.InternalEditorUtility.RepaintAllViews();
-    }
 #endif
+    }
     #endregion
 }
 
