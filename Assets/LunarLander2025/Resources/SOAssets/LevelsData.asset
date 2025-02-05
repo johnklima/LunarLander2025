@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelsData:
   - name: Level 1
-    planetPrefab: {fileID: 212392469884621240, guid: a3aee81b76c2b3d40b16c45877da7f81,
+    planetPrefab: {fileID: 3878388103606804336, guid: ff4e756a087cd1a479ee03ffc39b3355,
       type: 3}
     shipMaxFuel: 40
     zenitBlend: 10.4
@@ -27,7 +27,7 @@ MonoBehaviour:
     starPower: 58
     starIntensity: 199.13
   - name: Level 2
-    planetPrefab: {fileID: 1093668363752244217, guid: cd14900b04e4ad54fb48d2da913785e9,
+    planetPrefab: {fileID: 7832446821353554470, guid: d0b64c1747195ad48aacb724f9dd6c04,
       type: 3}
     shipMaxFuel: 60
     zenitBlend: 4.6
@@ -40,7 +40,7 @@ MonoBehaviour:
     starPower: 73.8
     starIntensity: 231.9
   - name: Level 3
-    planetPrefab: {fileID: 3073919765049721749, guid: 942174712696b8b4dbf2bb3c60c3f6ab,
+    planetPrefab: {fileID: 1456245038610183746, guid: 222ecdcb313b5874f815e3b0651d8985,
       type: 3}
     shipMaxFuel: 80
     zenitBlend: 4.8
